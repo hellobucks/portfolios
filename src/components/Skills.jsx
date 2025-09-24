@@ -36,13 +36,13 @@ export default function Skills() {
   }, []);
 
   const isMobile = windowWidth < 768;
-  const containerSize = isMobile ? 300 : 750;
+  const containerSize = isMobile ? 320 : 750;
   const radius = isMobile ? 120 : 320;
 
   return (
     <section
       id="skills"
-      className="py-16 md:py-24 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+      className="w-full overflow-x-hidden py-16 md:py-24 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
     >
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Title */}
@@ -50,7 +50,7 @@ export default function Skills() {
           Skills
         </h2>
 
-        {/* Responsive skill layout */}
+        {/* Orbit-style skill layout */}
         <div className="relative flex justify-center items-center">
           <div
             className="relative rounded-full border-4 border-blue-500/30 shadow-[0_0_80px_rgba(59,130,246,0.4)] animate-pulse"
@@ -59,7 +59,6 @@ export default function Skills() {
               height: `${containerSize}px`,
             }}
           >
-            {/* Skill icons positioned in orbit */}
             {skills.map((skill, idx) => {
               const angle = (idx / skills.length) * 2 * Math.PI;
               const x = radius * Math.cos(angle);
