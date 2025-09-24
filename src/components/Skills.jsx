@@ -22,30 +22,34 @@ export default function Skills() {
     { name: "Postman", icon: <SiPostman size={60} color="#FF6C37" /> },
     { name: "Git", icon: <SiGit size={60} color="#F05032" /> },
     { name: "GitHub", icon: <SiGithub size={60} color="#181717" /> },
-    { name: "Python", icon: <SiPython size={60} color="#3776AB" /> }, // ✅ Bigger Python
+    { name: "Python", icon: <SiPython size={60} color="#3776AB" /> },
   ];
 
   return (
     <section
       id="skills"
-      className="py-24 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+      className="py-16 md:py-24 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
     >
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Title */}
-        <h2 className="text-5xl font-extrabold text-white dark:text-gray-900 mb-16 tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white dark:text-gray-900 mb-12 tracking-wide">
           Skills
         </h2>
 
-        {/* Orbiting Circle */}
-        <div className="relative w-[750px] h-[750px] mx-auto">
-          {/* glowing circle border for aesthetics */}
-          <div className="absolute inset-0 rounded-full border-4 border-blue-500/30 shadow-[0_0_80px_rgba(59,130,246,0.4)] animate-pulse"></div>
-
-          {/* Orbit layer */}
-          <div className="absolute inset-0 rounded-full animate-orbit">
+        {/* Responsive skill layout */}
+        <div className="relative flex justify-center items-center">
+          {/* Container size changes based on screen */}
+          <div
+            className="relative rounded-full border-4 border-blue-500/30 shadow-[0_0_80px_rgba(59,130,246,0.4)] animate-pulse"
+            style={{
+              width: window.innerWidth < 768 ? "300px" : "750px",
+              height: window.innerWidth < 768 ? "300px" : "750px",
+            }}
+          >
+            {/* Orbit layer */}
             {skills.map((skill, idx) => {
               const angle = (idx / skills.length) * 2 * Math.PI;
-              const radius = 320; // ✅ Larger radius for clarity
+              const radius = window.innerWidth < 768 ? 120 : 320; // responsive radius
               const x = radius * Math.cos(angle);
               const y = radius * Math.sin(angle);
 
@@ -54,13 +58,13 @@ export default function Skills() {
                   key={idx}
                   className="absolute flex flex-col items-center"
                   style={{
-                    transform: `translate(${375 + x}px, ${375 + y}px)`, // half of container size (750/2)
+                    transform: `translate(${(window.innerWidth < 768 ? 150 : 375) + x}px, ${(window.innerWidth < 768 ? 150 : 375) + y}px)`,
                   }}
                 >
-                  <div className="w-24 h-24 flex items-center justify-center rounded-2xl bg-gray-800 dark:bg-white shadow-lg shadow-blue-500/30 hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-2xl bg-gray-800 dark:bg-white shadow-lg shadow-blue-500/30 hover:scale-110 transition-transform duration-300">
                     {skill.icon}
                   </div>
-                  <span className="mt-4 text-base md:text-lg font-semibold text-gray-300 dark:text-gray-800 transition-colors duration-300 group-hover:text-blue-400">
+                  <span className="mt-2 text-xs md:text-base font-semibold text-gray-300 dark:text-gray-800 transition-colors duration-300">
                     {skill.name}
                   </span>
                 </div>

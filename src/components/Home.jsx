@@ -10,7 +10,7 @@ import {
   FiMail,
 } from "react-icons/fi";
 
-export default function Home({ profileImg, handleProfileClick }) {
+export default function Home() {
   const [displayedName, setDisplayedName] = useState(""); // for typewriter
   const fullName = "Jerame Matugas";
 
@@ -25,6 +25,10 @@ export default function Home({ profileImg, handleProfileClick }) {
     return () => clearInterval(interval);
   }, []);
 
+  const handleProfileClick = () => {
+    alert("Profile clicked!");
+  };
+
   const contacts = [
     { icon: <FiGithub size={22} />, href: "https://github.com/", label: "GitHub" },
     { icon: <FiYoutube size={22} />, href: "https://youtube.com/", label: "YouTube" },
@@ -35,7 +39,7 @@ export default function Home({ profileImg, handleProfileClick }) {
 
   return (
     <section className="w-full flex flex-col items-center justify-center py-28 md:py-36 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 dark:from-gray-50 dark:via-gray-100 dark:to-gray-50 transition-colors duration-500 relative overflow-hidden">
-      
+
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/2 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl -translate-x-1/2 animate-pulse"></div>
 
@@ -45,7 +49,7 @@ export default function Home({ profileImg, handleProfileClick }) {
         onClick={handleProfileClick}
       >
         <Image
-          src={profileImg}
+          src="/profile.jpg"
           alt="Profile"
           width={230}
           height={230}
