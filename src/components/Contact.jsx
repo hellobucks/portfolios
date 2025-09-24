@@ -52,46 +52,50 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-16 px-4 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
     >
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-gray-900 mb-4 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-gray-900 mb-6 text-center">
           Contact Me
         </h2>
-        <p className="text-gray-400 dark:text-gray-700 mb-10 text-center text-base md:text-lg">
+        <p className="text-gray-400 dark:text-gray-700 mb-8 text-center text-sm sm:text-base">
           I’d love to hear from you! Whether you have a project in mind or just
           want to say hello, feel free to reach out.
         </p>
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-5 bg-gray-800 dark:bg-white p-6 md:p-8 rounded-2xl shadow-lg transition-colors duration-500"
+          className="flex flex-col gap-4 sm:gap-5 bg-gray-800 dark:bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg transition-colors duration-500"
         >
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
-            required
-            className="p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 w-full"
-          />
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-            className="p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 w-full"
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows={6}
-            required
-            className="p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 w-full"
-          />
+          {["Your Name", "Your Email", "Your Message"].map((placeholder, i) => {
+            if (placeholder === "Your Message") {
+              return (
+                <textarea
+                  key={i}
+                  name="message"
+                  placeholder={placeholder}
+                  rows={5}
+                  required
+                  className="p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full transition-all duration-300"
+                />
+              );
+            }
+            return (
+              <input
+                key={i}
+                type={placeholder === "Your Email" ? "email" : "text"}
+                name={placeholder === "Your Email" ? "user_email" : "user_name"}
+                placeholder={placeholder}
+                required
+                className="p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full transition-all duration-300"
+              />
+            );
+          })}
+
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50"
+            className="bg-blue-500 hover:bg-blue-600 px-4 sm:px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
@@ -99,7 +103,7 @@ export default function Contact() {
 
         {status && (
           <p
-            className={`mt-4 text-center text-sm font-medium ${
+            className={`mt-4 text-center text-sm sm:text-base font-medium ${
               statusType === "success"
                 ? "text-green-400 dark:text-green-600"
                 : "text-red-400 dark:text-red-600"

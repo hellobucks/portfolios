@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Home from "../components/Home";
 import About from "../components/About";
@@ -9,7 +9,7 @@ import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 
 export default function HomePage() {
-  const [theme, setTheme] = useState("dark"); // default dark
+  const [theme, setTheme] = useState("dark");
   const [mounted, setMounted] = useState(false);
   const [profileImg, setProfileImg] = useState("/profile.jpg");
 
@@ -19,7 +19,7 @@ export default function HomePage() {
     if (savedTheme) {
       setTheme(savedTheme);
     } else {
-      setTheme("dark"); // fallback default
+      setTheme("dark");
     }
     setMounted(true);
   }, []);
@@ -27,15 +27,16 @@ export default function HomePage() {
   // Apply theme & save to localStorage
   useEffect(() => {
     if (!mounted) return;
+
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
+
     localStorage.setItem("theme", theme);
   }, [theme, mounted]);
 
-  // Toggle theme
   const toggleTheme = () =>
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
 
@@ -46,8 +47,10 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100 font-sans transition-colors duration-500 dark:bg-gray-50 dark:text-gray-900">
+      {/* HEADER */}
       <Header toggleTheme={toggleTheme} theme={theme} />
 
+      {/* MAIN CONTENT */}
       <main className="flex-1 p-6 md:p-12 space-y-24 max-w-6xl mx-auto">
         <Home profileImg={profileImg} handleProfileClick={handleProfileClick} />
         <About />
