@@ -31,16 +31,16 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 md:py-24 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+      className="py-16 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-white dark:text-gray-900 mb-10 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-white dark:text-gray-900 mb-10">
           Projects
         </h2>
 
         {/* Project Cards */}
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, idx) => (
             <div
               key={idx}

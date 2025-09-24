@@ -5,6 +5,7 @@ import {
   SiHtml5, SiCss3, SiTailwindcss, SiOpenjdk, SiTypescript,
   SiPostman, SiGit, SiGithub, SiPython
 } from "react-icons/si";
+import { useEffect, useState } from "react";
 
 export default function Skills() {
   const skills = [
@@ -25,6 +26,19 @@ export default function Skills() {
     { name: "Python", icon: <SiPython size={60} color="#3776AB" /> },
   ];
 
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isMobile = windowWidth < 768;
+  const containerSize = isMobile ? 300 : 750;
+  const radius = isMobile ? 120 : 320;
+
   return (
     <section
       id="skills"
@@ -38,18 +52,16 @@ export default function Skills() {
 
         {/* Responsive skill layout */}
         <div className="relative flex justify-center items-center">
-          {/* Container size changes based on screen */}
           <div
             className="relative rounded-full border-4 border-blue-500/30 shadow-[0_0_80px_rgba(59,130,246,0.4)] animate-pulse"
             style={{
-              width: window.innerWidth < 768 ? "300px" : "750px",
-              height: window.innerWidth < 768 ? "300px" : "750px",
+              width: `${containerSize}px`,
+              height: `${containerSize}px`,
             }}
           >
-            {/* Orbit layer */}
+            {/* Skill icons positioned in orbit */}
             {skills.map((skill, idx) => {
               const angle = (idx / skills.length) * 2 * Math.PI;
-              const radius = window.innerWidth < 768 ? 120 : 320; // responsive radius
               const x = radius * Math.cos(angle);
               const y = radius * Math.sin(angle);
 
@@ -58,7 +70,7 @@ export default function Skills() {
                   key={idx}
                   className="absolute flex flex-col items-center"
                   style={{
-                    transform: `translate(${(window.innerWidth < 768 ? 150 : 375) + x}px, ${(window.innerWidth < 768 ? 150 : 375) + y}px)`,
+                    transform: `translate(${containerSize / 2 + x}px, ${containerSize / 2 + y}px)`,
                   }}
                 >
                   <div className="w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-2xl bg-gray-800 dark:bg-white shadow-lg shadow-blue-500/30 hover:scale-110 transition-transform duration-300">

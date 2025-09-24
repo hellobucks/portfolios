@@ -1,93 +1,98 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import {
-  FiGithub,
-  FiYoutube,
-  FiFacebook,
-  FiPhone,
-  FiMail,
-} from "react-icons/fi";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
-export default function Home() {
-  const [displayedName, setDisplayedName] = useState(""); // for typewriter
-  const fullName = "Jerame Matugas";
+export default function Contact() {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+  const [statusType, setStatusType] = useState("");
 
-  // Typewriter effect
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayedName(fullName.slice(0, i + 1));
-      i++;
-      if (i === fullName.length) clearInterval(interval);
-    }, 120);
-    return () => clearInterval(interval);
-  }, []);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("");
+    setStatusType("");
 
-  const handleProfileClick = () => {
-    alert("Profile clicked!");
+    const form = e.target;
+    try {
+      await emailjs.sendForm(
+        "service_f9s2jth",
+        "template_ja710k9",
+        form,
+        "UteHZhd09KhUJnhAu"
+      );
+      setStatus("✅ Message sent successfully!");
+      setStatusType("success");
+      form.reset();
+    } catch (err) {
+      console.error("EmailJS Error:", err);
+      setStatus("❌ Failed to send message. Please try again.");
+      setStatusType("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const contacts = [
-    { icon: <FiGithub size={22} />, href: "https://github.com/", label: "GitHub" },
-    { icon: <FiYoutube size={22} />, href: "https://youtube.com/", label: "YouTube" },
-    { icon: <FiFacebook size={22} />, href: "https://facebook.com/", label: "Facebook" },
-    { icon: <FiMail size={22} />, href: "mailto:jeramematugas@gmail.com", label: "Email" },
-    { icon: <FiPhone size={22} />, href: "tel:+639168868536", label: "Phone" },
-  ];
-
   return (
-    <section className="w-full flex flex-col items-center justify-center py-28 md:py-36 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 dark:from-gray-50 dark:via-gray-100 dark:to-gray-50 transition-colors duration-500 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+    >
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-gray-900 mb-4 text-center">
+          Contact Me
+        </h2>
+        <p className="text-gray-400 dark:text-gray-700 mb-10 text-center text-sm sm:text-base">
+          I’d love to hear from you! Whether you have a project in mind or just
+          want to say hello, feel free to reach out.
+        </p>
 
-      {/* Background Glow */}
-      <div className="absolute top-1/4 left-1/2 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl -translate-x-1/2 animate-pulse"></div>
-
-      {/* Profile Image */}
-      <div
-        className="relative cursor-pointer mb-8 hover:scale-110 transition-transform duration-500"
-        onClick={handleProfileClick}
-      >
-        <Image
-          src="/profile.jpg"
-          alt="Profile"
-          width={230}
-          height={230}
-          className="rounded-full border-4 border-transparent bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 p-1 shadow-2xl object-cover"
-        />
-      </div>
-
-      {/* Name */}
-      <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-fade-in">
-        {displayedName}
-        <span className="animate-pulse text-blue-400">|</span>
-      </h1>
-
-      {/* Subtitle */}
-      <p className="text-lg md:text-2xl text-gray-300 dark:text-gray-700 mb-12 text-center max-w-xl animate-fade-in">
-        🚀 Web Developer • 🧩 Problem Solver
-      </p>
-
-      {/* Contact & Socials */}
-      <div className="flex flex-wrap justify-center gap-6">
-        {contacts.map((item, idx) => (
-          <a
-            key={idx}
-            href={item.href}
-            target={item.href.startsWith("http") ? "_blank" : "_self"}
-            rel="noopener noreferrer"
-            className="group relative flex items-center justify-center w-14 h-14 rounded-full 
-                       bg-white/10 dark:bg-black/10 backdrop-blur-md border border-white/20 
-                       text-white dark:text-gray-900 shadow-lg transition-all duration-500 
-                       hover:scale-125 hover:bg-gradient-to-tr hover:from-blue-500 hover:to-purple-500"
-            aria-label={item.label}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4 sm:gap-6 bg-gray-800 dark:bg-white p-6 sm:p-8 rounded-2xl shadow-lg transition-colors duration-500"
+        >
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+            className="p-3 sm:p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 w-full"
+          />
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+            className="p-3 sm:p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 w-full"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows={6}
+            required
+            className="p-3 sm:p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 w-full"
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-blue-500 hover:bg-blue-600 px-4 sm:px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50"
           >
-            {item.icon}
-            <span className="absolute -bottom-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm text-gray-400 dark:text-gray-600">
-              {item.label}
-            </span>
-          </a>
-        ))}
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+
+        {status && (
+          <p
+            className={`mt-4 text-center text-sm font-medium ${
+              statusType === "success"
+                ? "text-green-400 dark:text-green-600"
+                : "text-red-400 dark:text-red-600"
+            }`}
+          >
+            {status}
+          </p>
+        )}
       </div>
     </section>
   );

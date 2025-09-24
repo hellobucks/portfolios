@@ -35,7 +35,7 @@ export default function Header({ toggleTheme, theme }) {
     <header className="flex justify-between items-center py-4 px-6 md:px-12 bg-gray-900/90 dark:bg-gray-100/90 sticky top-0 z-50 shadow-md transition-colors duration-500">
       {/* Logo */}
       <h1 className="text-2xl font-bold text-white dark:text-gray-900">
-        My Portfolio
+        My Showcase
       </h1>
 
       {/* Desktop Nav */}

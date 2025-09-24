@@ -54,18 +54,22 @@ export default function Contact() {
       id="contact"
       className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
     >
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-gray-900 mb-6 text-center">
+      <div className="max-w-3xl mx-auto flex flex-col gap-8">
+        {/* Title */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-gray-900 text-center">
           Contact Me
         </h2>
-        <p className="text-gray-400 dark:text-gray-700 mb-8 text-center text-sm sm:text-base">
+
+        {/* Subtitle */}
+        <p className="text-gray-400 dark:text-gray-700 text-center text-sm sm:text-base max-w-lg mx-auto">
           I’d love to hear from you! Whether you have a project in mind or just
           want to say hello, feel free to reach out.
         </p>
 
+        {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 sm:gap-5 bg-gray-800 dark:bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg transition-colors duration-500"
+          className="flex flex-col gap-4 sm:gap-5 bg-gray-800 dark:bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-lg transition-colors duration-500"
         >
           {["Your Name", "Your Email", "Your Message"].map((placeholder, i) => {
             if (placeholder === "Your Message") {
@@ -101,6 +105,7 @@ export default function Contact() {
           </button>
         </form>
 
+        {/* Status Message */}
         {status && (
           <p
             className={`mt-4 text-center text-sm sm:text-base font-medium ${
