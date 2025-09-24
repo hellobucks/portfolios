@@ -52,9 +52,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-gray-100 transition-colors duration-500 overflow-x-hidden"
     >
-      <div className="max-w-3xl mx-auto flex flex-col gap-8">
+      <div className="max-w-lg mx-auto flex flex-col gap-8 w-full">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white dark:text-gray-900 text-center">
           Contact Me
@@ -69,7 +69,7 @@ export default function Contact() {
         {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 sm:gap-5 bg-gray-800 dark:bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-lg transition-colors duration-500"
+          className="flex flex-col gap-4 sm:gap-5 bg-gray-800 dark:bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-lg transition-colors duration-500 w-full"
         >
           {["Your Name", "Your Email", "Your Message"].map((placeholder, i) => {
             if (placeholder === "Your Message") {
@@ -80,7 +80,7 @@ export default function Contact() {
                   placeholder={placeholder}
                   rows={5}
                   required
-                  className="p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full transition-all duration-300"
+                  className="p-4 rounded-lg bg-gray-700 dark:bg-gray-100 border border-gray-600 dark:border-gray-300 text-white dark:text-gray-900 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full resize-none transition-all duration-300"
                 />
               );
             }
@@ -99,7 +99,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600 px-4 sm:px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50"
+            className="bg-blue-500 hover:bg-blue-600 px-4 sm:px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 disabled:opacity-50 w-full"
           >
             {loading ? "Sending..." : "Send Message"}
           </button>

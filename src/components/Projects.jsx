@@ -31,9 +31,9 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+      className="w-full overflow-x-hidden py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-white dark:text-gray-900 mb-10">
           Projects
