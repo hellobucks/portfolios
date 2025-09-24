@@ -10,7 +10,7 @@ import {
   FiMail,
 } from "react-icons/fi";
 
-export default function Home() {
+export default function Home({ profileImg, handleProfileClick }) {
   const [displayedName, setDisplayedName] = useState("");
   const fullName = "Jerame Matugas";
 
@@ -23,10 +23,6 @@ export default function Home() {
     }, 120);
     return () => clearInterval(interval);
   }, []);
-
-  const handleProfileClick = () => {
-    alert("Profile clicked!");
-  };
 
   const contacts = [
     { icon: <FiGithub size={22} />, href: "https://github.com/", label: "GitHub" },
@@ -48,7 +44,7 @@ export default function Home() {
           onClick={handleProfileClick}
         >
           <Image
-            src="/profile.jpg"
+            src={profileImg}
             alt="Jerame Matugas"
             width={160}
             height={160}
