@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 
@@ -30,16 +31,19 @@ export default function Experience() {
   ];
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-16 py-12 bg-gradient-to-b from-white to-gray-50">
+    <section
+      id="experience"
+      className="w-full px-4 sm:px-6 lg:px-16 py-12 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800"
+    >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 text-center mb-12">
           <span className="inline-flex items-center gap-2">
-            <Briefcase className="w-8 h-8 text-blue-600" />
+            <Briefcase className="w-8 h-8 text-blue-600 dark:text-blue-400" />
             Work Experience
           </span>
         </h2>
 
-        <div className="relative border-l-2 border-blue-500">
+        <div className="relative border-l-2 border-blue-500 dark:border-blue-400">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -47,17 +51,17 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="mb-10 ml-6"
+              className="mb-10 ml-6 relative"
             >
-              <div className="absolute -left-3 w-6 h-6 rounded-full bg-blue-600 border-2 border-white shadow"></div>
-              <div className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold text-gray-900">
+              <div className="absolute -left-3 w-6 h-6 rounded-full bg-blue-600 dark:bg-blue-400 border-2 border-white dark:border-gray-900 shadow"></div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                   {exp.role}
                 </h3>
-                <p className="text-gray-600 font-medium">
+                <p className="text-gray-600 dark:text-gray-300 font-medium">
                   {exp.company} • <span>{exp.period}</span>
                 </p>
-                <ul className="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                <ul className="list-disc list-inside mt-3 text-gray-700 dark:text-gray-300 space-y-1">
                   {exp.details.map((d, i) => (
                     <li key={i}>{d}</li>
                   ))}
