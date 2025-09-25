@@ -8,7 +8,7 @@ export default function Header({ toggleTheme, theme }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sections = ["home", "about", "projects","experience", "skills", "contact"];
+    const sections = ["home", "about", "projects", "skills", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,7 +28,7 @@ export default function Header({ toggleTheme, theme }) {
     return () => observer.disconnect();
   }, []);
 
-  const navLinks = ["about", "projects", "experience","skills", "contact"];
+  const navLinks = ["about", "projects", "skills", "contact"];
 
   return (
     <header className="w-full overflow-x-hidden flex flex-wrap justify-between items-center py-4 px-4 sm:px-6 md:px-12 bg-gray-900/90 dark:bg-gray-100/90 sticky top-0 z-50 shadow-md transition-colors duration-500">
@@ -48,7 +48,7 @@ export default function Header({ toggleTheme, theme }) {
                   activeSection === section
                     ? "text-blue-400 dark:text-blue-600 after:w-full"
                     : "text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600 after:w-0"
-                } after:content-[""] after:block after:h-0.5 after:bg-blue-400 dark:after:bg-blue-600 after:transition-all after:duration-300`}
+                } after:content-[''] after:block after:h-0.5 after:bg-blue-400 dark:after:bg-blue-600 after:transition-all after:duration-300`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
