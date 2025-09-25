@@ -48,7 +48,7 @@ export default function Header({ toggleTheme, theme }) {
                   activeSection === section
                     ? "text-blue-400 dark:text-blue-600 after:w-full"
                     : "text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600 after:w-0"
-                } after:content-[''] after:block after:h-0.5 after:bg-blue-400 dark:after:bg-blue-600 after:transition-all after:duration-300`}
+                } after:content-[""] after:block after:h-0.5 after:bg-blue-400 dark:after:bg-blue-600 after:transition-all after:duration-300`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
