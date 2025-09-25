@@ -8,7 +8,7 @@ export default function Header({ toggleTheme, theme }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sections = ["home", "about", "projects", "skills", "contact"];
+    const sections = ["home", "about", "projects","experience", "skills", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,7 +28,7 @@ export default function Header({ toggleTheme, theme }) {
     return () => observer.disconnect();
   }, []);
 
-  const navLinks = ["about", "projects", "skills", "contact"];
+  const navLinks = ["about", "projects", "experience","skills", "contact"];
 
   return (
     <header className="w-full overflow-x-hidden flex flex-wrap justify-between items-center py-4 px-4 sm:px-6 md:px-12 bg-gray-900/90 dark:bg-gray-100/90 sticky top-0 z-50 shadow-md transition-colors duration-500">
