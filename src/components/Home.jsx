@@ -40,15 +40,18 @@ export default function Home({ profileImg, handleProfileClick }) {
       <div className="max-w-4xl mx-auto text-center">
         {/* Profile Image */}
         <div
-          className="mx-auto mb-6 w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105"
+          className="mx-auto mb-6 w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden 
+                     shadow-2xl cursor-pointer bg-gradient-to-br from-indigo-500/20 
+                     to-pink-500/20 p-1 transition-transform duration-500 
+                     hover:scale-110 hover:rotate-2"
           onClick={handleProfileClick}
         >
           <Image
             src={profileImg}
             alt="Jerame Matugas"
-            width={160}
-            height={160}
-            className="object-cover w-full h-full"
+            width={192}
+            height={192}
+            className="object-contain w-full h-full rounded-xl"
           />
         </div>
 
@@ -70,7 +73,9 @@ export default function Home({ profileImg, handleProfileClick }) {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800 dark:bg-white text-white dark:text-gray-900 shadow-md hover:scale-105 transition-transform duration-300"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800 dark:bg-white 
+                         text-white dark:text-gray-900 shadow-md hover:scale-110 hover:shadow-lg 
+                         transition-all duration-300"
             >
               {icon}
               <span className="text-sm font-medium">{label}</span>
