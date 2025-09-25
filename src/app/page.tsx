@@ -13,7 +13,6 @@ export default function HomePage() {
   const [mounted, setMounted] = useState(false);
   const [profileImg, setProfileImg] = useState("/profile.jpg");
 
-  // On mount → check if user has a saved theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -24,7 +23,6 @@ export default function HomePage() {
     setMounted(true);
   }, []);
 
-  // Apply theme & save to localStorage
   useEffect(() => {
     if (!mounted) return;
 
