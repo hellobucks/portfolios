@@ -17,11 +17,16 @@ export default function About() {
         {/* Content Card */}
         <div className="bg-gray-800/60 dark:bg-white/70 backdrop-blur-md rounded-2xl shadow-xl p-5 sm:p-8 md:p-12 flex flex-col gap-6">
 
-          {[
-            "Hello! I’m a passionate web developer with a strong focus on creating modern, responsive, and user-friendly websites. I love transforming ideas into clean, functional, and visually appealing digital experiences.",
-            "I graduated from Biliran Province State University, where I built a solid foundation in web technologies and gained hands-on experience developing projects that highlight usability, performance, and real-world solutions.",
-            "Over time, I’ve honed my skills in front-end development, UI/UX design, and performance optimization. My goal is to craft web applications that combine great design with seamless user experiences.",
-            "Outside of coding, I enjoy exploring new technologies, sharpening my design skills, and continuously learning how to make the web faster, smarter, and more engaging."
+        [
+  `Hello! I’m a dedicated backend developer with a strong focus on building reliable, efficient, and scalable systems. I enjoy designing and optimizing databases and creating robust backend architectures that power real-world applications.
+
+I graduated from Biliran Province State University, where I developed a solid foundation in programming and database technologies, gaining hands-on experience in building solutions that prioritize performance and data integrity.
+
+Over time, I’ve sharpened my skills in SQL, MongoDB, API development, and system design. My goal is to create backend systems that are both powerful and easy to maintain, ensuring smooth and efficient application performance.
+
+Outside of coding, I enjoy exploring new backend technologies, improving my database skills, and finding smarter ways to solve complex problems.`
+
+
           ].map((text, i) => (
             <p
               key={i}

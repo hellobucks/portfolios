@@ -79,6 +79,7 @@ export default function Home({ profileImg, handleProfileClick }) {
             >
               {icon}
               <span className="text-sm font-medium">{label}</span>
+              
             </a>
           ))}
         </div>
