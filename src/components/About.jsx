@@ -19,7 +19,7 @@ export default function About() {
         <div className="prose prose-lg max-w-none">
           <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 md:p-12 shadow-sm border border-gray-200 dark:border-gray-800">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              Hello! I'm a dedicated <span className="font-semibold text-primary-600 dark:text-primary-400">backend developer</span> with a strong focus on building reliable, efficient, and scalable systems. I enjoy designing and optimizing databases and creating robust backend architectures that power real-world applications.
+              Hello! I&apos;m a dedicated <span className="font-semibold text-primary-600 dark:text-primary-400">backend developer</span> with a strong focus on building reliable, efficient, and scalable systems. I enjoy designing and optimizing databases and creating robust backend architectures that power real-world applications.
             </p>
             
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
@@ -27,7 +27,7 @@ export default function About() {
             </p>
             
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              Over time, I've sharpened my skills in SQL, MongoDB, API development, and system design. My goal is to create backend systems that are both powerful and easy to maintain, ensuring smooth and efficient application performance.
+              Over time, I&apos;ve sharpened my skills in SQL, MongoDB, API development, and system design. My goal is to create backend systems that are both powerful and easy to maintain, ensuring smooth and efficient application performance.
             </p>
             
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">

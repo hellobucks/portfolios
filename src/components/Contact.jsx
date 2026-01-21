@@ -65,7 +65,7 @@ export default function Contact() {
 
         {/* Subtitle */}
         <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-lg mx-auto">
-          I'm always interested in hearing about new projects and opportunities. 
+          I&apos;m always interested in hearing about new projects and opportunities. 
           Whether you have a question or just want to say hi, feel free to reach out!
         </p>
 
