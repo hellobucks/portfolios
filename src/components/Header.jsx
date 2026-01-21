@@ -17,7 +17,7 @@ export default function Header({ toggleTheme, theme }) {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.5 }
     );
 
     sections.forEach((id) => {
@@ -31,74 +31,78 @@ export default function Header({ toggleTheme, theme }) {
   const navLinks = ["about", "projects", "skills", "contact"];
 
   return (
-    <header className="w-full overflow-x-hidden flex flex-wrap justify-between items-center py-4 px-4 sm:px-6 md:px-12 bg-gray-900/90 dark:bg-gray-100/90 sticky top-0 z-50 shadow-md transition-colors duration-500">
-      {/* Logo */}
-      <h1 className="text-xl sm:text-2xl font-bold text-white dark:text-gray-900 truncate">
-        My Showcase
-      </h1>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
+          Jerame Matugas
+        </h1>
 
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex flex-wrap items-center gap-4">
-        <ul className="flex flex-wrap gap-4">
-          {navLinks.map((section) => (
-            <li key={section}>
-              <a
-                href={`#${section}`}
-                className={`relative font-medium text-sm sm:text-base transition-colors duration-300 ${
-                  activeSection === section
-                    ? "text-blue-400 dark:text-blue-600 after:w-full"
-                    : "text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600 after:w-0"
-                } after:content-[''] after:block after:h-0.5 after:bg-blue-400 dark:after:bg-blue-600 after:transition-all after:duration-300`}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Theme Toggle */}
-        <button
-          onClick={toggleTheme}
-          className="ml-4 p-2 rounded-full bg-gray-700 dark:bg-gray-300 text-white dark:text-gray-900 shadow-md hover:scale-110 transition-transform duration-300"
-        >
-          {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
-        </button>
-      </nav>
-
-      {/* Mobile Controls */}
-      <div className="md:hidden flex items-center gap-2">
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-full bg-gray-700 dark:bg-gray-300 text-white dark:text-gray-900 shadow-md"
-        >
-          {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
-        </button>
-
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="text-white dark:text-gray-900 text-2xl"
-        >
-          {menuOpen ? <FiX /> : <FiMenu />}
-        </button>
-      </div>
-
-      {/* Mobile Dropdown Menu */}
-      {menuOpen && (
-        <div className="absolute top-16 left-0 w-full px-4 bg-gray-900/95 dark:bg-gray-100/95 backdrop-blur-md flex flex-col items-center gap-4 py-6 shadow-lg md:hidden overflow-x-hidden">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((section) => (
             <a
               key={section}
               href={`#${section}`}
-              onClick={() => setMenuOpen(false)}
-              className={`font-medium text-lg w-full text-center transition-colors duration-300 ${
+              className={`text-sm font-medium transition-colors duration-200 ${
                 activeSection === section
-                  ? "text-blue-400 dark:text-blue-600"
-                  : "text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600"
+                  ? "text-primary-600 dark:text-primary-400"
+                  : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               }`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
           ))}
+          
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
+          </button>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center space-x-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
+          </button>
+          
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+          <nav className="px-6 py-4 space-y-3">
+            {navLinks.map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                onClick={() => setMenuOpen(false)}
+                className={`block text-sm font-medium transition-colors duration-200 ${
+                  activeSection === section
+                    ? "text-primary-600 dark:text-primary-400"
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                }`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            ))}
+          </nav>
         </div>
       )}
     </header>

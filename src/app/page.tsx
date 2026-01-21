@@ -44,12 +44,12 @@ export default function HomePage() {
     );
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100 font-sans transition-colors duration-500 dark:bg-gray-50 dark:text-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
       {/* HEADER */}
       <Header toggleTheme={toggleTheme} theme={theme} />
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 p-6 md:p-12 space-y-24 max-w-6xl mx-auto">
+      <main className="max-w-6xl mx-auto px-6 py-12 md:px-12 lg:px-16 space-y-32">
         <Home profileImg={profileImg} handleProfileClick={handleProfileClick} />
         <About />
         <Skills />

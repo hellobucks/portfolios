@@ -5,7 +5,7 @@ export default function Projects() {
     {
       name: "Procurement System",
       description:
-        "A full-stack system to manage supplier bidding, RFQ uploads, and purchase order tracking for streamlined procurement.",
+        "A full-stack system to manage supplier bidding, RFQ uploads, and purchase order tracking for streamlined procurement processes.",
       tech: ["Next.js", "Spring Boot", "MySQL"],
       link: "#",
       status: "Repository Available",
@@ -13,15 +13,15 @@ export default function Projects() {
     {
       name: "Anxiety Monitoring System",
       description:
-        "A campus-based web application designed to track and assess the anxiety levels of students and employees. It provides digital surveys, generates reports, and helps administrators monitor mental well-being for timely support and interventions.",
-      tech: ["TailwindCSS", "Laravel (PHP)", "MySQL"],
+        "Campus-based web application for tracking student and employee anxiety levels through digital surveys and generating reports for timely mental health support.",
+      tech: ["TailwindCSS", "Laravel", "MySQL"],
       link: "#",
-      status: "Demo Unavailable – Backend Required",
+      status: "Demo Available",
     },
     {
       name: "Human Resource Management System",
       description:
-        "An enterprise HRMS designed to manage employee records, payroll, and performance tracking with an integrated backend for scalability.",
+        "Enterprise HRMS designed to manage employee records, payroll processing, and performance tracking with integrated backend scalability.",
       tech: ["Next.js", "Java", "Groovy", "MySQL", "MongoDB"],
       link: "#",
       status: "Repository Available",
@@ -31,50 +31,55 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="w-full overflow-x-hidden py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 dark:bg-gray-100 transition-colors duration-500"
+      className="py-20"
     >
-      <div className="max-w-6xl mx-auto">
-        {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-white dark:text-gray-900 mb-10">
-          Projects
-        </h2>
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Featured Projects
+          </h2>
+          <div className="w-16 h-1 bg-primary-600 dark:bg-primary-400 mx-auto rounded-full"></div>
+        </div>
 
         {/* Project Cards */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="flex flex-col bg-gray-800 dark:bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+              className="group bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Title */}
-              <h3 className="text-xl sm:text-2xl font-semibold text-white dark:text-gray-900 mb-3">
-                {project.name}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm sm:text-base text-gray-300 dark:text-gray-700 mb-4 leading-relaxed">
-                {project.description}
-              </p>
-
-              {/* Tech stack tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-3 py-1 text-xs sm:text-sm rounded-full bg-blue-500/20 dark:bg-blue-600/20 text-blue-400 dark:text-blue-600"
-                  >
-                    {tech}
-                  </span>
-                ))}
+              {/* Project Header */}
+              <div className="p-6 border-b border-gray-200 dark:border-gray-800">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  {project.name}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  {project.description}
+                </p>
               </div>
 
-              {/* View Project */}
-              <a
-                href={project.link}
-                className="mt-auto inline-block px-4 py-2 text-sm sm:text-base rounded-lg bg-blue-500 text-white dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 transition-colors duration-300 shadow-md text-center"
-              >
-                {project.status}
-              </a>
+              {/* Tech Stack */}
+              <div className="p-6">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 text-xs font-medium rounded-full bg-primary-50 dark:bg-primary-950 text-primary-600 dark:text-primary-400 border border-primary-200 dark:border-primary-800"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Project Link */}
+                <a
+                  href={project.link}
+                  className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium rounded-lg bg-primary-600 dark:bg-primary-500 text-white hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors duration-200"
+                >
+                  {project.status}
+                </a>
+              </div>
             </div>
           ))}
         </div>
