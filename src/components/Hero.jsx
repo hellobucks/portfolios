@@ -113,10 +113,10 @@ export default function Hero() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-primary-600 dark:bg-primary-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+              <div className="absolute inset-0 bg-primary-600 dark:bg-primary-400 rounded-2xl blur-3xl opacity-30 animate-pulse"></div>
               
-              {/* Large Profile Image */}
-              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-6 border-white dark:border-gray-800 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+              {/* Large Rectangular Profile Image */}
+              <div className="relative w-80 h-96 md:w-96 md:h-96 rounded-2xl overflow-hidden border-6 border-white dark:border-gray-800 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
                 <Image
                   src="/profile.jpg"
                   alt="Jerame Matugas"
@@ -125,8 +125,8 @@ export default function Hero() {
                   priority
                 />
                 
-                {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/20 dark:to-gray-900/20 rounded-full"></div>
+                {/* Subtle Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/10 dark:to-gray-900/10 rounded-2xl"></div>
               </div>
 
               {/* Floating Achievement Badges */}
