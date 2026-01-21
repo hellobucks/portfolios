@@ -16,3 +16,32 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+@layer components {
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+                      linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+    background-size: 4rem 4rem;
+  }
+  
+  .dark .bg-grid-pattern {
+    background-image: linear-gradient(to right, #374151 1px, transparent 1px),
+                      linear-gradient(to bottom, #374151 1px, transparent 1px);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+}
