@@ -113,10 +113,10 @@ export default function Hero() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-primary-600 dark:bg-primary-400 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+              <div className="absolute inset-0 bg-primary-600 dark:bg-primary-400 rounded-full blur-3xl opacity-30 animate-pulse"></div>
               
-              {/* Profile Image */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+              {/* Large Profile Image */}
+              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-6 border-white dark:border-gray-800 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
                 <Image
                   src="/profile.jpg"
                   alt="Jerame Matugas"
@@ -124,15 +124,29 @@ export default function Hero() {
                   className="object-cover"
                   priority
                 />
+                
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/20 dark:to-gray-900/20 rounded-full"></div>
               </div>
 
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center shadow-lg animate-float">
-                <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">5+</span>
+              {/* Floating Achievement Badges */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg flex flex-col items-center justify-center animate-float border border-gray-100 dark:border-gray-700">
+                <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">5+</div>
+                <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">Years Exp</div>
               </div>
               
-              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg animate-float-delayed">
-                <span className="text-2xl font-bold text-gray-900 dark:text-white">50+</span>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary-600 dark:bg-primary-500 rounded-2xl shadow-lg flex flex-col items-center justify-center animate-float-delayed">
+                <div className="text-2xl font-bold text-white">50+</div>
+                <div className="text-xs text-white font-medium">Projects</div>
+              </div>
+
+              {/* Additional Floating Elements */}
+              <div className="absolute top-1/2 -left-8 w-16 h-16 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center animate-float border border-gray-100 dark:border-gray-700">
+                <span className="text-xl">🚀</span>
+              </div>
+              
+              <div className="absolute top-1/3 -right-8 w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full shadow-lg flex items-center justify-center animate-float-delayed border border-primary-200 dark:border-primary-800">
+                <span className="text-xl">⭐</span>
               </div>
             </div>
           </div>
