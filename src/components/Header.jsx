@@ -117,6 +117,17 @@ export default function Header({ toggleTheme, theme }) {
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
             ))}
+            
+            {/* Mobile Resume Button */}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="block px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-200 shadow-sm hover:shadow-md text-center"
+            >
+              Resume
+            </a>
           </nav>
         </div>
       )}
