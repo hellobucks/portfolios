@@ -60,16 +60,16 @@ export default function Hero() {
           {/* Text Content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-4xl md:text-6xl font-display text-gray-900 dark:text-white tracking-tight">
                 Hi, I&apos;m <span className="text-primary-600 dark:text-primary-400">Jerame Matugas</span>
               </h1>
-              <div className="text-2xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 h-12">
+              <div className="text-2xl md:text-4xl font-headline text-gray-700 dark:text-gray-300 h-12 tracking-tight">
                 <span>{text}</span>
                 <span className="animate-pulse">|</span>
               </div>
             </div>
 
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-lg text-body text-gray-600 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Passionate developer with expertise in building scalable web applications. 
               I transform complex problems into elegant, user-friendly solutions that drive business success.
             </p>
