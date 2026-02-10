@@ -182,7 +182,7 @@ export default function Contact() {
                     name="user_name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="John Doe"
+                    placeholder="Buckeet Writer"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
                   />
@@ -198,7 +198,7 @@ export default function Contact() {
                     name="user_email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="john@example.com"
+                    placeholder="example@gmail.com"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
                   />
