@@ -59,6 +59,16 @@ export default function Header({ toggleTheme, theme }) {
             </a>
           ))}
           
+          {/* Resume Button */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white text-sm font-medium rounded-lg hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-200 shadow-sm hover:shadow-md"
+          >
+            Resume
+          </a>
+          
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
