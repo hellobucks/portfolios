@@ -71,8 +71,8 @@ export default function Contact() {
     {
       icon: <FiPhone size={20} />,
       label: "Phone",
-      value: "+63 912 345 6789",
-      href: "tel:+639123456789"
+      value: "+63 9168868536",
+      href: "tel:+639168868536"
     },
     {
       icon: <FiMapPin size={20} />,
@@ -139,7 +139,7 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/hellobucks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-gray-900 dark:bg-gray-700 rounded-lg text-white hover:bg-primary-600 dark:hover:bg-primary-500 transition-colors duration-300"

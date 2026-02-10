@@ -42,7 +42,7 @@ export default function Hero() {
   }, [text, isDeleting, loopNum, typingSpeed]);
 
   const socialLinks = [
-    { icon: <FiGithub size={20} />, href: "https://github.com", label: "GitHub" },
+    { icon: <FiGithub size={20} />, href: "https://github.com/hellobucks", label: "GitHub" },
     { icon: <FiLinkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: <FiMail size={20} />, href: "mailto:jeramematugas@gmail.com", label: "Email" },
   ];
@@ -61,7 +61,7 @@ export default function Hero() {
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
-                Hi, I&apos;m <span className="text-primary-600 dark:text-primary-400">Jerame</span>
+                Hi, I&apos;m <span className="text-primary-600 dark:text-primary-400">Jerame Matugas</span>
               </h1>
               <div className="text-2xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 h-12">
                 <span>{text}</span>
@@ -145,9 +145,7 @@ export default function Hero() {
                 <span className="text-xl">🚀</span>
               </div>
               
-              <div className="absolute top-1/3 -right-8 w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full shadow-lg flex items-center justify-center animate-float-delayed border border-primary-200 dark:border-primary-800">
-                <span className="text-xl">⭐</span>
-              </div>
+          
             </div>
           </div>
         </div>
