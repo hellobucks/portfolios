@@ -51,9 +51,8 @@ export default function Experience() {
       school: "Biliran Province State University",
       location: "Naval, Biliran",
       period: "2015 - 2019",
-      description: "Graduated with honors. Specialized in software development and database systems.",
+      description: "Specialized in software development and database systems.",
       achievements: [
-        "Dean's List for 6 consecutive semesters",
         "Lead developer in capstone project",
         "Active member of Computer Science Society"
       ]
