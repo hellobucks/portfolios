@@ -111,14 +111,14 @@ export default function Hero() {
 
           {/* Image/Visual */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-80 h-96 md:w-96 md:h-96">
+            <div className="relative w-72 h-96 md:w-80 md:h-[28rem] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/profile.jpg"
                 alt="Jerame Matugas"
                 fill
                 className="object-cover"
                 priority
-                style={{ objectPosition: 'center 20%' }}
+                style={{ objectPosition: 'center 25%' }}
               />
             </div>
           </div>
