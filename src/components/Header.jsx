@@ -61,7 +61,7 @@ export default function Header({ toggleTheme, theme }) {
           
           {/* Resume Button */}
           <a
-            href="/resume.pdf"
+            href="/resume/final_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={`text-sm font-medium transition-colors duration-200 ${
