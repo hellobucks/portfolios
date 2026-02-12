@@ -22,30 +22,30 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-display text-gray-900 dark:text-white mb-4 tracking-tight">
-            About Me
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-display text-slate-900 dark:text-white mb-6 tracking-tight">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Me</span>
           </h2>
-          <div className="w-16 h-1 bg-primary-600 dark:bg-primary-400 mx-auto rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Highlights */}
           {highlights.map((highlight, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 shadow-lg"
             >
-              <div className="flex items-center mb-4 text-primary-600 dark:text-primary-400">
+              <div className="flex items-center mb-6 w-14 h-14 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-xl text-blue-600 dark:text-blue-400">
                 {highlight.icon}
               </div>
-              <h3 className="text-lg font-headline text-gray-900 dark:text-white mb-2 tracking-tight">
+              <h3 className="text-xl font-headline text-slate-900 dark:text-white mb-3 tracking-tight font-semibold">
                 {highlight.title}
               </h3>
-              <p className="text-body text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              <p className="text-body text-slate-600 dark:text-slate-400 leading-relaxed">
                 {highlight.description}
               </p>
             </div>
@@ -54,38 +54,38 @@ export default function About() {
 
         {/* Main Content */}
         <div className="lg:col-span-3">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-sm border border-gray-200 dark:border-gray-800">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white dark:bg-slate-800 rounded-3xl p-10 md:p-14 shadow-xl border border-slate-200 dark:border-slate-700">
+            <div className="grid md:grid-cols-2 gap-12">
               {/* Left Column */}
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
-                    <FiUser className="text-primary-600 dark:text-primary-400" size={20} />
+              <div className="space-y-8">
+                <div className="flex items-start space-x-5">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-xl flex items-center justify-center">
+                    <FiUser className="text-blue-600 dark:text-blue-400" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-headline text-gray-900 dark:text-white mb-2 tracking-tight">
+                    <h4 className="font-headline text-slate-900 dark:text-white mb-3 tracking-tight text-lg font-semibold">
                       Professional Background
                     </h4>
-                    <p className="text-body text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    <p className="text-body text-slate-600 dark:text-slate-400 leading-relaxed">
                       Dedicated backend developer with expertise in building reliable, efficient, and scalable systems. 
-                      Specialized in database design and API development.
+                      Specialized in database design and API development with a focus on performance optimization.
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Right Column */}
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
-                    <FiAward className="text-primary-600 dark:text-primary-400" size={20} />
+              <div className="space-y-8">
+                <div className="flex items-start space-x-5">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-xl flex items-center justify-center">
+                    <FiAward className="text-blue-600 dark:text-blue-400" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-headline text-gray-900 dark:text-white mb-2 tracking-tight">
+                    <h4 className="font-headline text-slate-900 dark:text-white mb-3 tracking-tight text-lg font-semibold">
                       Education & Expertise
                     </h4>
-                    <p className="text-body text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                      Graduate of <span className="font-semibold text-primary-600 dark:text-primary-400">Biliran Province State University</span>. 
+                    <p className="text-body text-slate-600 dark:text-slate-400 leading-relaxed">
+                      Graduate of <span className="font-semibold text-blue-600 dark:text-blue-400">Biliran Province State University</span>. 
                       Skilled in SQL, MongoDB, API development, and system architecture.
                     </p>
                   </div>
@@ -94,17 +94,17 @@ export default function About() {
             </div>
 
             {/* Bottom Section */}
-            <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center">
-                  <FiTarget className="text-primary-600 dark:text-primary-400" size={20} />
+            <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex items-start space-x-5">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-xl flex items-center justify-center">
+                  <FiTarget className="text-blue-600 dark:text-blue-400" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-headline text-gray-900 dark:text-white mb-2 tracking-tight">
+                  <h4 className="font-headline text-slate-900 dark:text-white mb-3 tracking-tight text-lg font-semibold">
                     Continuous Growth
                   </h4>
-                  <p className="text-body text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    Passionate about exploring <span className="font-semibold text-primary-600 dark:text-primary-400">new technologies</span>, 
+                  <p className="text-body text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Passionate about exploring <span className="font-semibold text-blue-600 dark:text-blue-400">new technologies</span>, 
                     improving database skills, and finding innovative solutions to complex problems.
                   </p>
                 </div>

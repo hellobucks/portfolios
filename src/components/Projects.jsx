@@ -92,32 +92,32 @@ export default function Projects() {
     : filteredProjects;
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured Projects
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-display text-slate-900 dark:text-white mb-6 tracking-tight">
+            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Projects</span>
           </h2>
-          <div className="w-16 h-1 bg-primary-600 dark:bg-primary-400 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
             A selection of my recent work showcasing expertise in modern web development, 
             system architecture, and user experience design.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex items-center bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-1">
-            <FiFilter className="ml-3 mr-2 text-gray-500 dark:text-gray-400" />
+        <div className="flex justify-center mb-16">
+          <div className="inline-flex items-center bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-1.5 shadow-lg">
+            <FiFilter className="ml-4 mr-3 text-slate-500 dark:text-slate-400" />
             {categories.map((category) => (
               <button
                 key={category.value}
                 onClick={() => setFilter(category.value)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
                   filter === category.value
-                    ? "bg-primary-600 dark:bg-primary-500 text-white"
-                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white shadow-md"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700"
                 }`}
               >
                 {category.label}
@@ -131,18 +131,18 @@ export default function Projects() {
           {displayProjects.map((project) => (
             <div
               key={project.id}
-              className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 shadow-lg"
             >
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 overflow-hidden">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+              <div className="relative h-52 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 overflow-hidden">
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 opacity-50">
+                  <div className="text-5xl font-bold text-blue-600 dark:text-blue-400 opacity-30">
                     {project.name.charAt(0)}
                   </div>
                 </div>
                 {project.featured && (
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-primary-600 dark:bg-primary-500 text-white text-xs font-medium rounded-full">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white text-xs font-semibold rounded-full shadow-lg">
                     Featured
                   </div>
                 )}

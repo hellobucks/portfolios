@@ -14,15 +14,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
+    <footer className="bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-              Jerame Matugas
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+              Jerame <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Matugas</span>
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Full Stack Developer passionate about building scalable and user-friendly web applications.
             </p>
             <div className="flex space-x-4">
@@ -32,7 +32,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:border-primary-600 dark:hover:border-primary-400 transition-all duration-300"
+                  className="flex items-center justify-center w-12 h-12 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-600 dark:hover:border-blue-400 transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-md"
                   aria-label={label}
                 >
                   {icon}
@@ -42,63 +42,66 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <div className="space-y-6">
+            <h4 className="text-xl font-semibold text-slate-900 dark:text-white">
               Quick Links
             </h4>
-            <nav className="space-y-2">
-              <a href="#hero" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+            <nav className="space-y-3">
+              <a href="#hero" className="block text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                 Home
               </a>
-              <a href="#about" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+              <a href="#about" className="block text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                 About
               </a>
-              <a href="#experience" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-                Experience
+              <a href="#skills" className="block text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
+                Skills
               </a>
-              <a href="#projects" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+              <a href="#projects" className="block text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                 Projects
               </a>
-              <a href="#contact" className="block text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+              <a href="#contact" className="block text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                 Contact
               </a>
             </nav>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <div className="space-y-6">
+            <h4 className="text-xl font-semibold text-slate-900 dark:text-white">
               Get In Touch
             </h4>
-            <div className="space-y-2">
-              <p className="text-gray-600 dark:text-gray-400">
-                Email: jeramematugas@gmail.com
+            <div className="space-y-3">
+              <p className="text-slate-600 dark:text-slate-400">
+                Email: <span className="font-medium">jeramematugas@gmail.com</span>
               </p>
-              <p className="text-gray-600 dark:text-gray-400">
-                Location: Philippines
+              <p className="text-slate-600 dark:text-slate-400">
+                Location: <span className="font-medium">Philippines</span>
               </p>
-              <p className="text-gray-600 dark:text-gray-400">
-                Available for freelance work
+              <p className="text-slate-600 dark:text-slate-400">
+                Status: <span className="inline-flex items-center">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                  Available for freelance work
+                </span>
               </p>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <div className="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
+            <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 md:mb-0">
               © {new Date().getFullYear()} Jerame Matugas. All rights reserved.
             </p>
             
             {/* Scroll to Top Button */}
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 px-4 py-2 bg-primary-600 dark:bg-primary-500 text-white rounded-full hover:bg-primary-700 dark:hover:bg-primary-600 transition-colors duration-200"
+              className="flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-600 dark:hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               aria-label="Scroll to top"
             >
-              <FiArrowUp size={16} />
-              <span className="text-sm font-medium">Back to Top</span>
+              <FiArrowUp size={18} />
+              <span className="text-sm font-semibold">Back to Top</span>
             </button>
           </div>
         </div>

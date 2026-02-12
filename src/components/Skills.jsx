@@ -29,15 +29,15 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-20"
+      className="py-24 bg-white dark:bg-slate-900"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Skills & Technologies
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-display text-slate-900 dark:text-white mb-6 tracking-tight">
+            Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Technologies</span>
           </h2>
-          <div className="w-16 h-1 bg-primary-600 dark:bg-primary-400 mx-auto rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full"></div>
         </div>
 
         {/* Skills Grid */}
@@ -45,12 +45,12 @@ export default function Skills() {
           {skills.map((skill, idx) => (
             <div
               key={idx}
-              className="group flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-primary-600 dark:hover:border-primary-400 transition-all duration-300 hover:shadow-lg"
+              className="group flex flex-col items-center p-8 bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 shadow-lg"
             >
-              <div className="mb-3 transition-transform duration-300 group-hover:scale-110">
+              <div className="mb-4 transition-transform duration-300 group-hover:scale-110">
                 {skill.icon}
               </div>
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+              <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 text-center">
                 {skill.name}
               </span>
             </div>
