@@ -25,7 +25,7 @@ export default function Home({ profileImg, handleProfileClick }) {
   }, []);
 
   const contacts = [
-    { icon: <FiGithub size={20} />, href: "https://github.com/", label: "GitHub" },
+    { icon: <FiGithub size={20} />, href: "https://github.com/Buck33ts", label: "GitHub" },
     { icon: <FiMail size={20} />, href: "mailto:jeramematugas@gmail.com", label: "Email" },
     { icon: <FiPhone size={20} />, href: "tel:+639123456789", label: "Phone" },
   ];
