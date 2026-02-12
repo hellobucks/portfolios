@@ -49,10 +49,8 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      </div>
+      {/* Background */}
+      <div className="absolute inset-0 bg-white dark:bg-gray-950"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
@@ -61,9 +59,9 @@ export default function Hero() {
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-display text-gray-900 dark:text-white tracking-tight">
-                Hi, I&apos;m <span className="text-primary-600 dark:text-primary-400">Jerame Matugas</span>
+                Hi, I&apos;m <span className="text-gray-700 dark:text-gray-300">Jerame Matugas</span>
               </h1>
-              <div className="text-2xl md:text-4xl font-headline text-gray-700 dark:text-gray-300 h-12 tracking-tight">
+              <div className="text-2xl md:text-4xl font-headline text-gray-600 dark:text-gray-400 h-12 tracking-tight">
                 <span>{text}</span>
                 <span className="animate-pulse">|</span>
               </div>
@@ -78,7 +76,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-3 bg-primary-600 dark:bg-primary-500 text-white font-medium rounded-full hover:bg-primary-700 dark:hover:bg-primary-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-8 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-medium rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-all duration-300 hover:scale-105"
               >
                 Get In Touch
                 <FiArrowDown className="ml-2 animate-bounce" />
@@ -86,7 +84,7 @@ export default function Hero() {
               
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-primary-600 dark:border-primary-400 text-primary-600 dark:text-primary-400 font-medium rounded-full hover:bg-primary-600 dark:hover:bg-primary-400 hover:text-white dark:hover:text-white transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-gray-100 font-medium rounded-full hover:bg-gray-900 dark:hover:bg-gray-100 hover:text-white dark:hover:text-gray-900 transition-all duration-300 hover:scale-105"
               >
                 View Projects
               </a>
@@ -100,7 +98,7 @@ export default function Hero() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 hover:border-primary-600 dark:hover:border-primary-400 transition-all duration-300 hover:scale-110"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-900 dark:hover:border-gray-400 transition-all duration-300 hover:scale-110"
                   aria-label={label}
                 >
                   {icon}
@@ -110,15 +108,15 @@ export default function Hero() {
           </div>
 
           {/* Image/Visual */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-72 h-96 md:w-80 md:h-[28rem] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative flex justify-center lg:justify-end p-8">
+            <div className="relative w-80 h-[32rem] overflow-hidden">
               <Image
                 src="/profile.jpg"
                 alt="Jerame Matugas"
                 fill
                 className="object-cover"
                 priority
-                style={{ objectPosition: 'center 25%' }}
+                style={{ objectPosition: 'center 20%' }}
               />
             </div>
           </div>
