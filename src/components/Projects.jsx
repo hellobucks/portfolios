@@ -15,7 +15,7 @@ export default function Projects() {
       category: "fullstack",
       image: "/project1.jpg",
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/hellobucks",
+      githubUrl: "https://github.com/Buck33ts",
       featured: true
     },
     {
@@ -26,7 +26,7 @@ export default function Projects() {
       category: "fullstack",
       image: "/project2.jpg",
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/hellobucks",
+      githubUrl: "https://github.com/Buck33ts",
       featured: true
     },
     {
@@ -37,7 +37,7 @@ export default function Projects() {
       category: "fullstack",
       image: "/project3.jpg",
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/hellobucks",
+      githubUrl: "https://github.com/Buck33ts",
       featured: false
     },
     {
@@ -48,7 +48,7 @@ export default function Projects() {
       category: "frontend",
       image: "/project4.jpg",
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/hellobucks",
+      githubUrl: "https://github.com/Buck33ts",
       featured: false
     },
     {
@@ -59,7 +59,7 @@ export default function Projects() {
       category: "backend",
       image: "/project5.jpg",
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/hellobucks",
+      githubUrl: "https://github.com/Buck33ts",
       featured: false
     },
     {
@@ -70,7 +70,7 @@ export default function Projects() {
       category: "fullstack",
       image: "/project6.jpg",
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com/hellobucks",
+      githubUrl: "https://github.com/Buck33ts",
       featured: false
     }
   ];

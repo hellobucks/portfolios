@@ -42,8 +42,8 @@ export default function Hero() {
   }, [text, isDeleting, loopNum, typingSpeed]);
 
   const socialLinks = [
-    { icon: <FiGithub size={20} />, href: "https://github.com/hellobucks", label: "GitHub" },
-    { icon: <FiLinkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: <FiGithub size={20} />, href: "https://github.com/Buck33ts", label: "GitHub" },
+    { icon: <FiLinkedin size={20} />, href: "https://www.linkedin.com/in/jerame-matugas", label: "LinkedIn" },
     { icon: <FiMail size={20} />, href: "mailto:jeramematugas@gmail.com", label: "Email" },
   ];
 
@@ -109,14 +109,14 @@ export default function Hero() {
 
           {/* Image/Visual */}
           <div className="relative flex justify-center lg:justify-end p-8">
-            <div className="relative w-80 h-[32rem] overflow-hidden">
+            <div className="relative w-96 h-[28rem] md:w-[28rem] md:h-[32rem] overflow-hidden">
               <Image
                 src="/profile.jpg"
                 alt="Jerame Matugas"
                 fill
                 className="object-cover"
                 priority
-                style={{ objectPosition: 'center 20%' }}
+                style={{ objectPosition: 'center 25%' }}
               />
             </div>
           </div>

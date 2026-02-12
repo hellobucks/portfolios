@@ -4,8 +4,8 @@ import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
 
 export default function Footer() {
   const socialLinks = [
-    { icon: <FiGithub size={20} />, href: "https://github.com", label: "GitHub" },
-    { icon: <FiLinkedin size={20} />, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: <FiGithub size={20} />, href: "https://github.com/Buck33ts", label: "GitHub" },
+    { icon: <FiLinkedin size={20} />, href: "https://www.linkedin.com/in/jerame-matugas", label: "LinkedIn" },
     { icon: <FiMail size={20} />, href: "mailto:jeramematugas@gmail.com", label: "Email" },
   ];
 

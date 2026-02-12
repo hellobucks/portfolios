@@ -150,7 +150,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="www.linkedin.com/in/jerame-matugas"
+                  href="https://www.linkedin.com/in/jerame-matugas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors duration-300"
