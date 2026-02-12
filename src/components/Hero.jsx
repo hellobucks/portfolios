@@ -111,50 +111,15 @@ export default function Hero() {
 
           {/* Image/Visual */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Enhanced Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-primary-400 dark:from-primary-400 dark:via-primary-500 dark:to-primary-600 rounded-3xl blur-3xl opacity-25 animate-pulse"></div>
-              
-              {/* Professional Frame */}
-              <div className="relative w-80 h-96 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-105 border-8 border-white dark:border-gray-800 bg-white dark:bg-gray-900">
-                {/* Inner Frame */}
-                <div className="absolute inset-2 border-2 border-gray-100 dark:border-gray-700 rounded-2xl"></div>
-                
-                {/* Profile Image */}
-                <Image
-                  src="/profile.jpg"
-                  alt="Jerame Matugas"
-                  fill
-                  className="object-cover rounded-2xl"
-                  priority
-                  style={{ objectPosition: 'center 20%' }}
-                />
-                
-                {/* Professional Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5 dark:to-gray-900/5 rounded-2xl"></div>
-                
-                {/* Bottom Accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/90 dark:from-gray-900/90 to-transparent rounded-b-2xl"></div>
-              </div>
-
-              {/* Professional Achievement Badges */}
-              <div className="absolute -top-8 -right-8 w-28 h-28 bg-white dark:bg-gray-800 rounded-2xl shadow-xl flex flex-col items-center justify-center animate-float border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-shadow duration-300">
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400">5+</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400 font-medium text-center px-2">Years Experience</div>
-              </div>
-              
-              <div className="absolute -bottom-8 -left-8 w-28 h-28 bg-gradient-to-br from-primary-600 to-primary-500 dark:from-primary-500 dark:to-primary-600 rounded-2xl shadow-xl flex flex-col items-center justify-center animate-float-delayed hover:shadow-2xl transition-shadow duration-300">
-                <div className="text-3xl font-bold text-white">50+</div>
-                <div className="text-xs text-white font-medium text-center px-2">Projects Delivered</div>
-              </div>
-
-              {/* Status Indicators */}
-              <div className="absolute top-4 left-4 w-4 h-4 bg-green-500 rounded-full border-4 border-white dark:border-gray-900 shadow-lg animate-pulse"></div>
-              
-              <div className="absolute top-4 right-4 flex items-center space-x-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-xs text-gray-600 dark:text-gray-400 font-medium">Available</span>
-              </div>
+            <div className="relative w-80 h-96 md:w-96 md:h-96">
+              <Image
+                src="/profile.jpg"
+                alt="Jerame Matugas"
+                fill
+                className="object-cover"
+                priority
+                style={{ objectPosition: 'center 20%' }}
+              />
             </div>
           </div>
         </div>

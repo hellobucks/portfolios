@@ -139,7 +139,7 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/hellobucks"
+                  href="https://github.com/Buck33ts"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-gray-900 dark:bg-gray-700 rounded-lg text-white hover:bg-primary-600 dark:hover:bg-primary-500 transition-colors duration-300"
@@ -150,7 +150,7 @@ export default function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="www.linkedin.com/in/jerame-matugas-4932593a7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors duration-300"
