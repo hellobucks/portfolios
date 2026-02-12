@@ -66,8 +66,8 @@ export default function Header({ toggleTheme, theme }) {
             rel="noopener noreferrer"
             className={`text-sm font-medium transition-colors duration-200 ${
               activeSection === "resume"
-                ? "text-primary-600 dark:text-primary-400"
-                : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                ? "text-blue-600 dark:text-blue-400"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
             }`}
           >
             Resume
@@ -124,14 +124,14 @@ export default function Header({ toggleTheme, theme }) {
             
             {/* Mobile Resume Button */}
             <a
-              href="/resume.pdf"
+              href="/resume/final_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className={`block text-sm font-medium transition-colors duration-200 ${
                 activeSection === "resume"
-                  ? "text-primary-600 dark:text-primary-400"
-                  : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                  ? "text-blue-600 dark:text-blue-400"
+                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               Resume
